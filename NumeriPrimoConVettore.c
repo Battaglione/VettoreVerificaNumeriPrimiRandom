@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
+#define NMAX 128
+#define NMIN 32
 #define MAX 30
 
 int main(){
@@ -11,9 +12,7 @@ int main(){
     srand(time(NULL));
 
     for(i1 = 0; i1 < MAX; i1++){
-        do{
-            v[i1] = rand();
-        }while(v[i1] < 32 || v[i1] > 128);
+        v[i1] = rand()%(NMAX - NMIN + 1) + NMIN;
     }
 
     do{
