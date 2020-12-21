@@ -6,7 +6,7 @@
 #define MAX 30
 
 int main(){
-    int v[MAX], i1, i2, caseswitch, input, temp, fine, ris, primo;
+    int v[MAX], i1, i2, caseswitch, input, temp, fine, ris, primo; 
     fine = 0;
     primo = 1;
     srand(time(NULL));
@@ -78,10 +78,12 @@ int main(){
                 }
                 break;
             case 4:
-            printf("Fine\n");
-            fine = 1;
-            break;
-
+                printf("Fine\n");
+                fine = 1;
+                break;
+            default:
+                printf("Input non valido\n");
+                break;
         }
     }while(fine == 0);
 }
